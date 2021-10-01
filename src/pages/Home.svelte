@@ -15,7 +15,16 @@
 </div>
 
 <style>
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	.typewriter {
+		text-align: center;
+	}
 	.typewriter p {
+		position: absolute;
+		left: 18%;
 		width: 26ch;
 		overflow: hidden;
 		border-right: 0.5em solid black;

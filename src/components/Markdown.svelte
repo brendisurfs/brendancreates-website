@@ -18,13 +18,18 @@
 
 <style>
 	.container {
+		position: absolute;
+		top: 20%;
+		left: 30%;
+		right: 30%;
 		display: flex;
 		justify-content: center;
+		height: 100%;
 	}
 	p {
 		text-align: left;
-		font-size: 18px;
-		inline-size: 59vw;
+		font-size: 24px;
+		inline-size: 60vw;
 		overflow-wrap: inherit;
 	}
 </style>

@@ -30,8 +30,9 @@
 	main {
 		padding: 1em;
 		text-align: center;
-		max-width: 240px;
+		/* max-width: 240px; */
 		margin: 0;
+		height: 100%;
 	}
 
 	@media (min-width: 640px) {

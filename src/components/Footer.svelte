@@ -7,21 +7,31 @@
 	const footerItems = [{ name: "github", link: "github.com/brendisurfs" }];
 </script>
 
-<footer>
-	<!-- {#each footerItems as item}
-		<div>
-			{item.name}
-		</div>
-	{/each} -->
-	&copy;brendan prednis 2021
-</footer>
+<div class="container">
+	<footer>
+		<!-- {#each footerItems as item}
+			<div>
+				{item.name}
+			</div>
+			{/each} -->
+		&copy;brendan prednis 2021
+	</footer>
+</div>
 
 <style>
-	footer {
-		padding: 2em;
-		position: fixed;
+	.container {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		justify-items: center;
 		bottom: 0;
 		width: 100%;
-		height: 3vh;
+	}
+	footer {
+		position: absolute;
+		left: 45%;
+		bottom: 0;
+		padding: 0.1em;
+		height: 0vh;
 	}
 </style>
