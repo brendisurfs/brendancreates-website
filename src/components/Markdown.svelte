@@ -18,7 +18,6 @@
 
 <style>
 	.container {
-		position: absolute;
 		top: 20%;
 		left: 30%;
 		right: 30%;

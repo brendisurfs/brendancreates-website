@@ -26,7 +26,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 90%;
+		width: 100%;
 		position: absolute;
 	}
 	.brand a {

@@ -22,16 +22,11 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		position: absolute;
 		justify-items: center;
-		bottom: 0;
 		width: 100%;
 	}
 	footer {
-		position: absolute;
-		left: 45%;
-		bottom: 0;
-		padding: 0.1em;
-		height: 0vh;
+		color: white;
+		background-color: #cc6666;
 	}
 </style>

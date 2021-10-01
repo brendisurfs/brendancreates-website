@@ -17,15 +17,18 @@
 		<Navbar />
 	{/if}
 	<slot />
-	<Footer />
+	<div class="footer-container">
+		<Footer />
+	</div>
 </div>
 
 <style>
 	.window-container {
 		display: flex;
 		flex-direction: column;
-		overflow: auto;
 	}
-	@media (max-width: 640px) {
+	.footer-container {
+		bottom: 0;
+		width: 100%;
 	}
 </style>

@@ -53,6 +53,7 @@
 		padding: 0.5em;
 	}
 	.navbar {
+		padding: 1em;
 		display: flex;
 		flex-direction: row;
 		align-items: stretch;

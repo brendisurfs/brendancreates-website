@@ -8,7 +8,6 @@
 </script>
 
 <div class="container">
-	<canvas />
 	<div class="typewriter">
 		<p>something 3D will be here soon.</p>
 	</div>
@@ -18,13 +17,15 @@
 	.container {
 		display: flex;
 		flex-direction: column;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		top: 50%;
 	}
 	.typewriter {
 		text-align: center;
 	}
 	.typewriter p {
-		position: absolute;
-		left: 18%;
 		width: 26ch;
 		overflow: hidden;
 		border-right: 0.5em solid black;
