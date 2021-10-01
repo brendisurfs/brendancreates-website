@@ -7,18 +7,22 @@
 	import HomePage from "./pages/Home.svelte";
 	import AboutPage from "./pages/About.svelte";
 	import WorkPage from "./pages/WorkPage.svelte";
+	import Footer from "./components/Footer.svelte";
+	import ContactPage from "./pages/ContactPage.svelte";
 
 	// routes
 	const routes = {
 		"/": HomePage,
 		"/about": AboutPage,
 		"/work": WorkPage,
+		"/contact": ContactPage,
 	};
 </script>
 
 <main>
 	<Navbar />
 	<Router {routes} />
+	<Footer />
 </main>
 
 <style>
