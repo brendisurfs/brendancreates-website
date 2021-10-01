@@ -8,11 +8,11 @@
 </script>
 
 <footer>
-	{#each footerItems as item}
+	<!-- {#each footerItems as item}
 		<div>
 			{item.name}
 		</div>
-	{/each}
+	{/each} -->
 	&copy;brendan prednis 2021
 </footer>
 

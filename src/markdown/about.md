@@ -9,14 +9,11 @@ My background is in music composition from **San Diego State University** and **
 Outside of coding, I am an avid surfer and a fan of messing with Linux distros.
 
 # Tech
-I use **TypeScript** and **Go** daily, as both are great for speed and type safety.
 
-I use **Python** for scripting in SideFX Houdini.
 
-|\
-v
-
-My current personal frontend stack: **Svelte** + **ThreeJS** 
+My current personal frontend stack: **Svelte** + **ThreeJS**  
+My daily tools: **TypeScript** + **Go** \
+Scripting: **Python**
 
 Current OS: **Manjaro**.
 
@@ -29,7 +26,7 @@ Current OS: **Manjaro**.
 - PrismaORM
 - GORM
 
-**I am learning more about**: 
+**I want to learn more about**: 
 - net/http package 
 - Websockets
 - Rust 

@@ -1,5 +1,10 @@
 <script lang="ts">
 	console.log("this is the home page");
+
+	let message: string = "something 3D will be here soon.";
+	let messageLength = message.length;
+
+	console.log(messageLength);
 </script>
 
 <div class="container">
@@ -11,7 +16,7 @@
 
 <style>
 	.typewriter p {
-		width: 20%;
+		width: 26ch;
 		overflow: hidden;
 		border-right: 0.5em solid black;
 		white-space: nowrap;
@@ -27,7 +32,7 @@
 			width: 0;
 		}
 		to {
-			width: 20%;
+			width: 26ch;
 		}
 	}
 
@@ -37,7 +42,7 @@
 		to {
 			border-color: transparent;
 		}
-		19% {
+		18% {
 			border-color: black;
 		}
 	}

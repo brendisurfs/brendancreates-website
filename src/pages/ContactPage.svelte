@@ -3,7 +3,7 @@
 	let greeting = "";
 
 	enum ContactGreeting {
-		"Grettings Earthling",
+		"Greetings Earthling",
 		"Hello There",
 		"Make yourself known",
 		"Heyo",
