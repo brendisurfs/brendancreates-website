@@ -16,18 +16,18 @@
 	</div>
 
 	<div class="mobile-menu">
-		<button> X </button>
+		<button> Menu </button>
 	</div>
 </div>
 
 <style>
 	.container {
-		background: orange;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 100%;
-		position: absolute;
+		align-items: center;
+		margin-left: 1cm;
+		margin-right: 1cm;
 	}
 	.brand a {
 		text-transform: uppercase;
@@ -41,5 +41,9 @@
 	.brand p {
 		font-weight: lighter;
 		padding: 0.5em;
+	}
+	button {
+		border: none;
+		background: none;
 	}
 </style>

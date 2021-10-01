@@ -71,7 +71,7 @@
 				required
 				type="email"
 				id="email-input"
-				placeholder="surfing@brendan.com"
+				placeholder="gonesurfing@brendan.com"
 			/>
 			<label for="subject-input">Subject</label>
 			<input
@@ -87,6 +87,7 @@
 				required
 				type="textarea"
 				id="message-input"
+				placeholder="say something nice"
 				aria-label="contact message"
 			/>
 			<br />
@@ -102,14 +103,18 @@
 		min-height: 100vh;
 		font-size: larger;
 	}
+	.title-container {
+		text-align: center;
+	}
 	.form-flex {
+		height: 70ch;
 		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: left;
-		width: 24%;
-		height: 20em;
+		width: 100%;
+		min-width: 50vw;
 	}
 	textarea {
 		border-radius: 0;

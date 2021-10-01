@@ -9,25 +9,23 @@
 
 <div class="container">
 	<footer>
-		<!-- {#each footerItems as item}
-			<div>
-				{item.name}
-			</div>
-			{/each} -->
-		&copy;brendan prednis 2021
+		<div>github</div>
+		<div>&copy;brendan prednis 2021</div>
 	</footer>
 </div>
 
 <style>
 	.container {
-		display: inline-block;
-		justify-items: center;
-		position: inherit;
+		display: flex;
+		justify-content: space-between;
 		width: 100%;
 		bottom: 0;
+		margin: 0;
 	}
 	footer {
-		color: white;
-		background-color: #cc6666;
+		width: 100%;
+		background: lightgray;
+		display: flex;
+		justify-content: space-around;
 	}
 </style>

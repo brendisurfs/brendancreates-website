@@ -18,17 +18,15 @@
 
 <style>
 	.container {
-		top: 20%;
-		left: 30%;
-		right: 30%;
 		display: flex;
 		justify-content: center;
 		height: 100%;
+		padding: 1em;
+		max-width: 720px;
 	}
 	p {
 		text-align: left;
 		font-size: 20px;
 		inline-size: 60vw;
-		overflow-wrap: inherit;
 	}
 </style>
