@@ -5,4 +5,4 @@
 
 <Navbar />
 <slot />
-<!-- <Footer /> -->
+<Footer />

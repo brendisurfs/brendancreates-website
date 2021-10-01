@@ -64,7 +64,6 @@
 		display: flex;
 		flex-direction: row;
 		writing-mode: sideways-lr;
-		font-size: large;
 	}
 
 	/* button styling */

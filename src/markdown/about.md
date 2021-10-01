@@ -8,7 +8,7 @@ My background is in music composition from **San Diego State University** and **
 
 Outside of coding, I am an avid surfer and a fan of messing with Linux distros.
 
-## Tech
+# Tech
 I use **TypeScript** and **Go** daily, as both are great for speed and type safety.
 
 I use **Python** for scripting in SideFX Houdini.
@@ -41,6 +41,7 @@ Current OS: **Manjaro**.
 - SideFX Houdini
 - Redshift Renderer
 - Touchdesigner
+- Volta
 
 
 

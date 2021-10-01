@@ -13,14 +13,15 @@
 			{item.name}
 		</div>
 	{/each}
+	&copy;brendan prednis 2021
 </footer>
 
 <style>
 	footer {
-		padding: 1em;
-		position: absolute;
+		padding: 2em;
+		position: fixed;
 		bottom: 0;
 		width: 100%;
-		height: 2vh;
+		height: 3vh;
 	}
 </style>
