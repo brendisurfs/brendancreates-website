@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Footer from "../components/Footer.svelte";
+
 	console.log("this is the home page");
 </script>
 
@@ -7,6 +9,7 @@
 	<div class="typewriter">
 		<p>something 3D will be here soon.</p>
 	</div>
+	<Footer />
 </div>
 
 <style>

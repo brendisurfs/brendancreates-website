@@ -9,9 +9,9 @@
 	}
 
 	const routes: RouteInterface[] = [
-		{ name: ">", route: "/" },
 		{ name: "About", route: "/about" },
 		{ name: "Work", route: "/work" },
+		{ name: "<", route: "/" },
 	];
 </script>
 

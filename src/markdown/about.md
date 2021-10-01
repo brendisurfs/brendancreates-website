@@ -16,7 +16,7 @@ I use TypeScript and Go daily, as both are great for speed and type safety.
 
 I use Python for scripting in SideFX Houdini.
 
-**Libraries I am comfortable with**: 
+**I am comfortable with**: 
 - React 
 - NodeJS 
 - Express
@@ -25,7 +25,7 @@ I use Python for scripting in SideFX Houdini.
 - PrismaORM
 - GORM
 
-**Tech I want to learn more about**: 
+**I want to learn more about**: 
 - net/http package 
 - Websockets
 - Rust 
