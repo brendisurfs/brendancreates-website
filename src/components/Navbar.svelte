@@ -20,6 +20,7 @@
 	<div class="brand">
 		<a href="/" use:link>
 			<h1>brendancreates</h1>
+			<p>| creative developer</p>
 		</a>
 	</div>
 	<div class="navbar-menu">
@@ -38,11 +39,18 @@
 		text-decoration: none;
 		color: black;
 	}
-	.brand {
+	.brand a {
 		text-transform: uppercase;
 		color: black;
 		font-weight: bold;
 		font-size: large;
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.brand p {
+		font-weight: lighter;
+		padding: 0.5em;
 	}
 	.navbar {
 		display: flex;
@@ -56,6 +64,7 @@
 		display: flex;
 		flex-direction: row;
 		writing-mode: sideways-lr;
+		font-size: large;
 	}
 
 	/* button styling */
