@@ -20,10 +20,11 @@
 
 <style>
 	.container {
-		display: flex;
-		flex-direction: column;
+		display: inline-block;
 		justify-items: center;
+		position: inherit;
 		width: 100%;
+		bottom: 0;
 	}
 	footer {
 		color: white;

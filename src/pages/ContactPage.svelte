@@ -43,7 +43,7 @@
 <div class="container">
 	<div class="form-flex">
 		<div class="title-container">
-			<h2>Contact</h2>
+			<h2>CONTACT</h2>
 			<p>{greeting}</p>
 			<br /><br /><br />
 		</div>
@@ -99,6 +99,8 @@
 	.container {
 		display: flex;
 		justify-content: center;
+		min-height: 100vh;
+		font-size: larger;
 	}
 	.form-flex {
 		padding: 2rem;
@@ -107,6 +109,7 @@
 		justify-content: center;
 		text-align: left;
 		width: 24%;
+		height: 20em;
 	}
 	textarea {
 		border-radius: 0;

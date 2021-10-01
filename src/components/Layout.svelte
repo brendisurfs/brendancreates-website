@@ -16,10 +16,10 @@
 	{#if windowSize > 640}
 		<Navbar />
 	{/if}
-	<slot />
-	<div class="footer-container">
-		<Footer />
+	<div class="content">
+		<slot />
 	</div>
+	<Footer />
 </div>
 
 <style>
@@ -27,8 +27,9 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.footer-container {
-		bottom: 0;
-		width: 100%;
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 </style>

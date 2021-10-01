@@ -43,7 +43,7 @@
 		text-transform: uppercase;
 		color: black;
 		font-weight: bold;
-		font-size: large;
+		font-size: medium;
 		display: inline-flex;
 		flex-direction: row;
 		align-items: center;

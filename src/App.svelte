@@ -1,6 +1,4 @@
 <script lang="ts">
-	console.log("this is the main app area.");
-
 	import Router from "svelte-spa-router";
 	// pages
 	import HomePage from "./pages/Home.svelte";

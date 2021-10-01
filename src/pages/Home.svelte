@@ -7,23 +7,30 @@
 	console.log(messageLength);
 </script>
 
+<title>BRENDANCREATES</title>
 <div class="container">
 	<div class="typewriter">
 		<p>something 3D will be here soon.</p>
 	</div>
+	<canvas />
 </div>
 
 <style>
+	canvas {
+		min-height: 100vh;
+	}
+
 	.container {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		position: absolute;
 		width: 100%;
 		top: 50%;
 	}
+	/* typewriter effect */
 	.typewriter {
 		text-align: center;
+		height: 100%;
 	}
 	.typewriter p {
 		width: 26ch;
