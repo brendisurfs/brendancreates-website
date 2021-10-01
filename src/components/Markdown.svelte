@@ -24,7 +24,7 @@
 	p {
 		text-align: left;
 		font-size: 18px;
-		inline-size: 56vw;
+		inline-size: 59vw;
 		overflow-wrap: inherit;
 	}
 </style>

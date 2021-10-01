@@ -9,6 +9,7 @@
 	import WorkPage from "./pages/WorkPage.svelte";
 	import Footer from "./components/Footer.svelte";
 	import ContactPage from "./pages/ContactPage.svelte";
+	import Layout from "./components/Layout.svelte";
 
 	// routes
 	const routes = {
@@ -20,9 +21,9 @@
 </script>
 
 <main>
-	<Navbar />
-	<Router {routes} />
-	<Footer />
+	<Layout>
+		<Router {routes} />
+	</Layout>
 </main>
 
 <style>

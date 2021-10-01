@@ -1,25 +1,24 @@
 # About 
 
-My name is Brendan, I am a creative developer based out of California. 
+My name is **Brendan**, I am a creative developer based out of California. 
 
-I write interactive websites, create 3D visuals for musicians, and code CLI applications.
+I write **reactive websites**, create **3D visuals for musicians**, and code **CLI applications**.
 
-I have a background in music composition from both San Diego State University and New York University.
+My background is in music composition from **San Diego State University** and **New York University**.
 
-I really enjoyed the technical aspect of music production, and found myself researching endlessly into different software to make the sounds I wanted.
-
-Programming is the perfect balance between freeform creativity and structured processes.
-
-It ticks all the boxes for me.
-
-Outside of coding, I am an avid surfer and a fan of trying Linux distros (currently Manjaro).
+Outside of coding, I am an avid surfer and a fan of messing with Linux distros.
 
 ## Tech
-I use TypeScript and Go daily, as both are great for speed and type safety.
+I use **TypeScript** and **Go** daily, as both are great for speed and type safety.
 
-My current personal stack: **Svelte** + **ThreeJS**
+I use **Python** for scripting in SideFX Houdini.
 
-I use Python for scripting in SideFX Houdini.
+|\
+v
+
+My current personal frontend stack: **Svelte** + **ThreeJS** 
+
+Current OS: **Manjaro**.
 
 **I am comfortable with**: 
 - React 
@@ -30,13 +29,18 @@ I use Python for scripting in SideFX Houdini.
 - PrismaORM
 - GORM
 
-**I want to learn more about**: 
+**I am learning more about**: 
 - net/http package 
 - Websockets
 - Rust 
 - OSL 
 - Vue
 - Qt
+
+**Other tools I use:**
+- SideFX Houdini
+- Redshift Renderer
+- Touchdesigner
 
 
 
