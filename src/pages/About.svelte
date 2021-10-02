@@ -20,17 +20,23 @@
 
 <style>
 	.md-container {
-		padding: 1.5em;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: stretch;
 		height: 100%;
+		border: 1px solid red;
+		padding: 1em;
 	}
-	@media (max-width: 1250px) {
+	@media (max-width: 720px) {
 		.md-container {
-			width: 100%;
+			display: flex;
 			flex-direction: column;
 		}
+
+	}
+	.md-section {
+		border: 1px solid pink;
+		padding: 1em;
 	}
 </style>

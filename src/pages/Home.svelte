@@ -24,15 +24,15 @@
 	/* typewriter effect */
 	.typewriter {
 		height: 100vh;
-		text-align: center;
 		position: relative;
+		align-items: center;
 	}
 	.typewriter p {
 		width: 26ch;
-		overflow: hidden;
-		border-right: 0.5em solid black;
-		white-space: nowrap;
 		margin: 0 auto;
+		overflow: hidden;
+		white-space: nowrap;
+		border-right: 0.5em solid black;
 		letter-spacing: 0.05em;
 		animation: typing 2.5s steps(35, end),
 			blink-caret 0.75s step-end infinite;

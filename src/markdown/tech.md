@@ -1,6 +1,6 @@
 # Tech
 
-My current personal frontend stack: **Svelte** + **ThreeJS**  
+My current personal frontend stack: **Svelte** + **Three.js**  
 My daily tools: **TypeScript** + **Go** \
 Scripting: **Python**
 
@@ -9,7 +9,8 @@ Current OS: **Manjaro**.
 **I am comfortable with**:
 
 -   React
--   NodeJS
+-   Next.js
+-   Node.js
 -   Express
 -   Chakra-UI
 -   Styled Components
@@ -20,7 +21,6 @@ Current OS: **Manjaro**.
 
 -   net/http package
 -   Websockets
--   Rust
 -   OSL
 -   Vue
 -   Qt

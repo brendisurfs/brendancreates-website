@@ -18,6 +18,7 @@
 
 <style>
 	.container {
+		background: #151515;
 		display: flex;
 		justify-content: center;
 		height: 100%;
@@ -25,6 +26,7 @@
 		max-width: 720px;
 	}
 	p {
+		color: white;
 		text-align: left;
 		font-size: 20px;
 		inline-size: 60vw;

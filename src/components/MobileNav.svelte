@@ -21,6 +21,10 @@
 </div>
 
 <style>
+	a {
+		text-decoration: none;
+		font-style: normal;
+	}
 	.container {
 		display: flex;
 		flex-direction: row;

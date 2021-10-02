@@ -43,37 +43,33 @@
 <div class="container">
 	<div class="form-flex">
 		<div class="title-container">
-			<h2>CONTACT</h2>
+			<h1>Contact</h1>
 			<p>{greeting}</p>
+			<p>brendan.prednis@pm.me</p>
+			<p>(contact form will be up soon)</p>
 			<br /><br /><br />
 		</div>
 
 		<form on:submit|preventDefault={handleSubmit}>
-			<label for="first-name">First Name</label>
-			<input
+
+				<label for="name">Name*</label>
+				<input
 				required
 				type="text"
-				id="first-name"
-				aria-label="first name box"
-				placeholder="first name"
-			/>
+				id="name"
+				aria-label="name box"
+				placeholder="name"
+				/>
+				
 
-			<label for="last-name">Last Name</label>
-			<input
-				required
-				type="text"
-				id="last-name"
-				placeholder="last name"
-			/>
-
-			<label for="email-input">email</label>
+			<label for="email-input">Email*</label>
 			<input
 				required
 				type="email"
 				id="email-input"
 				placeholder="gonesurfing@brendan.com"
 			/>
-			<label for="subject-input">Subject</label>
+			<label for="subject-input">Subject*</label>
 			<input
 				required
 				type="text"
@@ -82,7 +78,7 @@
 			/>
 			<br />
 			<br />
-			<label for="message-input">Message</label>
+			<label for="message-input">Message*</label>
 			<textarea
 				required
 				type="textarea"
@@ -91,7 +87,7 @@
 				aria-label="contact message"
 			/>
 			<br />
-			<input type="submit" value="submit" />
+			<input disabled type="submit" value="Submit" />
 		</form>
 	</div>
 </div>
@@ -104,9 +100,11 @@
 		font-size: larger;
 	}
 	.title-container {
-		text-align: center;
+		text-align: left;
 	}
 	.form-flex {
+		background: #151515;
+		color: white;
 		height: 70ch;
 		padding: 2rem;
 		display: flex;
@@ -114,13 +112,24 @@
 		justify-content: center;
 		text-align: left;
 		width: 100%;
-		min-width: 50vw;
+
+		max-width: 40vw;
 	}
+
+	label {
+		padding: 0.15em;
+	}
+
 	textarea {
 		border-radius: 0;
 		height: 10vh;
 		width: 100%;
 		resize: none;
+	}
+	input[type="submit"] {
+		text-align: left;
+		background: #0062ff;
+		border: none;
 	}
 	input[type="submit"],
 	input[type="text"],
