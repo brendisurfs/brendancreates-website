@@ -32,7 +32,6 @@
 			flex-direction: column;
 			flex-wrap: inherit;
 		}
-
 	}
 	.md-section {
 		padding: 1em;

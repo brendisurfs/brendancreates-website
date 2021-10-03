@@ -16,7 +16,7 @@
 	</div>
 
 	<button class="mobile-menu">
-		<button> Menu </button>
+		<button on:click> Menu </button>
 	</button>
 </div>
 

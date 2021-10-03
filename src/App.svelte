@@ -2,10 +2,11 @@
 	import Router from "svelte-spa-router";
 	// pages
 	import HomePage from "./pages/Home.svelte";
-	import AboutPage from "./pages/About.svelte";
+	import AboutPage from "./pages/AboutPage.svelte";
 	import WorkPage from "./pages/WorkPage.svelte";
 	import ContactPage from "./pages/ContactPage.svelte";
 	import Layout from "./components/Layout.svelte";
+	import VisualsPage from "./pages/VisualsPage.svelte";
 
 	// routes
 	const routes = {
@@ -13,6 +14,7 @@
 		"/work": WorkPage,
 		"/about": AboutPage,
 		"/contact": ContactPage,
+		"/visual": VisualsPage,
 	};
 </script>
 

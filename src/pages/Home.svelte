@@ -9,11 +9,11 @@
 
 <title>BRENDANCREATES</title>
 <!-- <div class="container"> -->
-	<div class="typewriter">
-		<p>something 3D will be here soon.</p>
-	</div>
-<!-- </div> -->
+<div class="typewriter">
+	<p>something 3D will be here soon.</p>
+</div>
 
+<!-- </div> -->
 <style>
 	.container {
 		display: flex;
@@ -24,10 +24,10 @@
 	/* typewriter effect */
 	.typewriter {
 		top: 4vh;
-		min-height: 90vh;
+		min-height: 80vh;
 		position: relative;
+		text-align: center;
 		align-items: center;
-
 	}
 
 	.typewriter p {

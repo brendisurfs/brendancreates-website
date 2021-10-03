@@ -23,7 +23,7 @@
 		justify-content: center;
 		height: 100%;
 		padding: 1em;
-		max-width: 720px;
+		max-width: 820px;
 	}
 	p {
 		color: white;

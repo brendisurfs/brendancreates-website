@@ -10,9 +10,7 @@
 			about: "See code work",
 			cardLink: "/",
 		},
-		{ cardName: "Visual",
-		 about: "See Visual Work",
-		 cardLink: "/visual" },
+		{ cardName: "Visual", about: "See Visual Work", cardLink: "/visual" },
 	];
 </script>
 
@@ -26,6 +24,7 @@
 	.container {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		flex-direction: row;
 		padding: 1rem;
 		height: 100vh;

@@ -7,7 +7,11 @@
 		"Hello There",
 		"Make yourself known",
 		"Heyo",
+		"Feel free to send an owl if that works",
 	}
+
+	// get contactGreeting length for truly dynamic updating
+	let enumLen = Object.keys(ContactGreeting).length;
 
 	function randNum(min: number, max: number): number {
 		return Math.floor(Math.random() * (max - min + 1) + min);
@@ -15,7 +19,7 @@
 
 	onMount(() => {
 		console.log("contact page loaded.");
-		let enumChoice = randNum(0, 3);
+		let enumChoice = randNum(0, enumLen);
 		greeting = ContactGreeting[enumChoice];
 		console.log(enumChoice);
 	});
@@ -46,24 +50,24 @@
 			<h1>Contact</h1>
 			<p>{greeting}</p>
 			<p>brendan.prednis@pm.me</p>
-			<p>(contact form will be up soon)</p>
+			<p>(currently over-engineering the contact form)</p>
 			<br /><br /><br />
 		</div>
 
 		<form on:submit|preventDefault={handleSubmit}>
-
-				<label for="name">Name*</label>
-				<input
+			<label for="name">Name*</label>
+			<input
+				disabled
 				required
 				type="text"
 				id="name"
 				aria-label="name box"
 				placeholder="name"
-				/>
-				
+			/>
 
 			<label for="email-input">Email*</label>
 			<input
+				disabled
 				required
 				type="email"
 				id="email-input"
@@ -71,6 +75,7 @@
 			/>
 			<label for="subject-input">Subject*</label>
 			<input
+				disabled
 				required
 				type="text"
 				id="subject-input"
@@ -80,6 +85,7 @@
 			<br />
 			<label for="message-input">Message*</label>
 			<textarea
+				disabled
 				required
 				type="textarea"
 				id="message-input"
@@ -94,12 +100,16 @@
 
 <style>
 	.container {
+		padding: 1em;
 		display: flex;
 		justify-content: center;
 		min-height: 100vh;
 		font-size: larger;
 	}
 	.title-container {
+		position: relative;
+
+		transform: translate(1%, -20%);
 		text-align: left;
 	}
 	.form-flex {

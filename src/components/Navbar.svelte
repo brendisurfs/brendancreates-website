@@ -35,13 +35,16 @@
 </nav>
 
 <style>
+	nav {
+		color: #151515;
+	}
 	a {
 		text-decoration: none;
 		color: black;
 	}
 	.brand a {
 		text-transform: uppercase;
-		color: black;
+		color: #151515;
 		font-weight: bold;
 		font-size: medium;
 		display: inline-flex;
@@ -64,13 +67,14 @@
 		padding: 1em;
 		display: flex;
 		flex-direction: row;
-		writing-mode: sideways-lr;
+		/* writing-mode: sideways-lr; */
 		font-weight: lighter;
 	}
 
 	/* button styling */
 
 	button {
+		color: #151515;
 		border: none;
 		background: none;
 	}
