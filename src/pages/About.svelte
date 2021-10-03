@@ -25,18 +25,16 @@
 		justify-content: center;
 		align-items: stretch;
 		height: 100%;
-		border: 1px solid red;
-		padding: 1em;
 	}
 	@media (max-width: 720px) {
 		.md-container {
 			display: flex;
 			flex-direction: column;
+			flex-wrap: inherit;
 		}
 
 	}
 	.md-section {
-		border: 1px solid pink;
 		padding: 1em;
 	}
 </style>

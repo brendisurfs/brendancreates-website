@@ -7,25 +7,24 @@
 	const footerItems = [{ name: "github", link: "github.com/brendisurfs" }];
 </script>
 
-<div class="container">
-	<footer>
-		<div>github</div>
-		<div>&copy;brendan prednis 2021</div>
+	<footer class="container">
+		<!-- <p>github</p> -->
+		<p>&copy;brendan prednis 2021</p>
 	</footer>
-</div>
+
 
 <style>
 	.container {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		width: 100%;
 		bottom: 0;
 		margin: 0;
 	}
 	footer {
 		width: 100%;
-		background: lightgray;
+		/* background: #0062ff; */
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-evenly;
 	}
 </style>

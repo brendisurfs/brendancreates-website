@@ -15,9 +15,9 @@
 		</a>
 	</div>
 
-	<div class="mobile-menu">
+	<button class="mobile-menu">
 		<button> Menu </button>
-	</div>
+	</button>
 </div>
 
 <style>
@@ -29,7 +29,6 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
 		margin-left: 1cm;
 		margin-right: 1cm;
 	}
@@ -49,5 +48,12 @@
 	button {
 		border: none;
 		background: none;
+	}
+	button:hover {
+		color: #0062ff;
+	}
+	.mobile-menu {
+		display: flex;
+		justify-content: center;
 	}
 </style>

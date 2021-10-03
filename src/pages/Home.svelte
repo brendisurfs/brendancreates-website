@@ -8,11 +8,11 @@
 </script>
 
 <title>BRENDANCREATES</title>
-<div class="container">
+<!-- <div class="container"> -->
 	<div class="typewriter">
 		<p>something 3D will be here soon.</p>
 	</div>
-</div>
+<!-- </div> -->
 
 <style>
 	.container {
@@ -23,10 +23,13 @@
 	}
 	/* typewriter effect */
 	.typewriter {
-		height: 100vh;
+		top: 4vh;
+		min-height: 90vh;
 		position: relative;
 		align-items: center;
+
 	}
+
 	.typewriter p {
 		width: 26ch;
 		margin: 0 auto;

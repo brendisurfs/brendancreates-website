@@ -7,10 +7,12 @@
 	const workcardInfo = [
 		{
 			cardName: "Code",
-			about: "My code work",
+			about: "See code work",
 			cardLink: "/",
 		},
-		{ cardName: "Visual", about: "My visual work", cardLink: "/visual" },
+		{ cardName: "Visual",
+		 about: "See Visual Work",
+		 cardLink: "/visual" },
 	];
 </script>
 

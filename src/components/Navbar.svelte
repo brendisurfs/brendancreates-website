@@ -53,7 +53,7 @@
 		padding: 0.5em;
 	}
 	.navbar {
-		padding: 1em;
+		margin: 0.5em;
 		display: flex;
 		flex-direction: row;
 		align-items: stretch;
@@ -75,10 +75,10 @@
 		background: none;
 	}
 	button:hover {
-		color: blue;
+		color: #0062ff;
 	}
 	button:active {
 		background: none;
-		color: darkblue;
+		color: blue;
 	}
 </style>

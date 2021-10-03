@@ -8,7 +8,7 @@
 
 </script>
 
-	<a class="card-container" target="_blank" href={cardLink}>
+	<a class="card-container" href={cardLink}>
 		<div class="card-name-container">
 
 			<h2 class="card-name">
@@ -62,7 +62,9 @@
 		width: 100%;
 		font-size: large;
 		text-align: start;
-		
+	}
+	.about-text:hover {
+		background: rgb(0, 48, 126);
 	}
 	p {
 		padding: 0.15em;
