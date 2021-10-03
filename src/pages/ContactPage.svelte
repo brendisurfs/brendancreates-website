@@ -49,9 +49,11 @@
 	<div class="form-flex">
 		<div class="title-container">
 			<h1>Contact</h1>
-			<p>{greeting}</p>
-			<p>brendan.prednis@pm.me</p>
-			<p>(currently over-engineering the contact form)</p>
+			<p id="greeting">{greeting}</p>
+			<div class="email-section">
+				<h2 id="email-tag">brendan.prednis@pm.me</h2>
+				<p>(currently over-engineering the contact form)</p>
+			</div>
 			<br /><br /><br />
 		</div>
 
@@ -104,13 +106,14 @@
 		padding: 1em;
 		display: flex;
 		justify-content: center;
-		min-height: 100vh;
+		align-items: center;
+		min-height: 90vh;
 		font-size: larger;
 	}
 	.title-container {
 		position: relative;
 
-		transform: translate(1%, -20%);
+		transform: translate(1%, -10%);
 		text-align: left;
 	}
 	.form-flex {
@@ -124,7 +127,7 @@
 		text-align: left;
 		width: 100%;
 
-		max-width: 40vw;
+		max-width: 80vw;
 	}
 
 	label {
@@ -147,5 +150,21 @@
 	input[type="email"] {
 		width: 100%;
 		border-radius: 0;
+	}
+	.email-section {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	.email-section p {
+		font-weight: 300;
+	}
+
+	#email-tag {
+		font-weight: 500;
+	}
+	#greeting {
+		font-weight: 300;
 	}
 </style>

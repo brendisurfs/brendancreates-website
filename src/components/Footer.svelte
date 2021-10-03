@@ -7,11 +7,10 @@
 	const footerItems = [{ name: "github", link: "github.com/brendisurfs" }];
 </script>
 
-	<footer class="container">
-		<!-- <p>github</p> -->
-		<p>&copy;brendan prednis 2021</p>
-	</footer>
-
+<footer class="container">
+	<!-- <p>github</p> -->
+	<p>&copy;brendan prednis 2021</p>
+</footer>
 
 <style>
 	.container {

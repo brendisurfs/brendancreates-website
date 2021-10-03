@@ -27,8 +27,7 @@
 		align-items: center;
 		flex-direction: row;
 		padding: 1rem;
-		height: 100vh;
-		width: 100%;
+		height: 85vh;
 	}
 	@media (max-width: 760px) {
 		.container {

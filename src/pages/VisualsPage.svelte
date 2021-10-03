@@ -34,7 +34,7 @@
 	<div class="visuals-layout">
 		{#each imgSrc as image}
 			<div class="grid-item">
-				<img src={image.src} alt="artwork" />
+				<img class="image-item" src={image.src} alt="artwork" />
 				<div class="description">
 					<h2>
 						{image.name}
@@ -68,7 +68,8 @@
 	.grid-item {
 		background: #151515;
 		position: relative;
-		width: 500px;
+		min-width: 240px;
+		max-width: 500px;
 		margin: 1em;
 		text-align: center;
 	}
@@ -88,10 +89,15 @@
 		}
 	}
 
+	img {
+		width: 100%;
+		height: auto;
+	}
 	.description {
 		position: absolute;
 		height: 500px;
-		width: 500px;
+		min-width: 240px;
+		max-width: 500px;
 		top: 44%;
 		left: 50%;
 		transform: translate(-50%, -50%);

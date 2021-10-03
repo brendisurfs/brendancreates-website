@@ -26,6 +26,7 @@
 	.window-container {
 		display: flex;
 		flex-direction: column;
+		padding: 0.5em;
 	}
 	.content {
 		display: flex;

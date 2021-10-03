@@ -26,7 +26,7 @@
 		align-items: stretch;
 		height: 100%;
 	}
-	@media (max-width: 720px) {
+	@media (max-width: 820px) {
 		.md-container {
 			display: flex;
 			flex-direction: column;

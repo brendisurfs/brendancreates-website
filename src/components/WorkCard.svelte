@@ -35,9 +35,9 @@
 		flex-direction: column;
 		border: 1px solid white;
 		text-align: left;
-		height: 40vh;
-		width: 500px;
-		min-width: 380px;
+		height: 50vh;
+		min-width: 400px;
+		max-width: 600px;
 		justify-content: space-between;
 		transition: color 0.2s ease-in-out, background 0.2s ease-in-out,
 			border 0.2s ease-in-out;
