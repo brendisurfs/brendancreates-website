@@ -8,26 +8,29 @@
 </script>
 
 <title>BRENDANCREATES</title>
-<!-- <div class="container"> -->
-<div class="typewriter">
-	<p>something 3D will be here soon.</p>
+<div class="container">
+	<div class="typewriter">
+		<p>something 3D will be here soon.</p>
+	</div>
 </div>
 
-<!-- </div> -->
 <style>
 	.container {
 		display: flex;
 		flex-direction: column;
-		text-align: center;
+		justify-content: center;
 		width: 100%;
+		height: 90vh;
 	}
 	/* typewriter effect */
 	.typewriter {
-		top: 4vh;
-		min-height: 80vh;
+		position: absolute;
 		position: relative;
 		text-align: center;
 		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 50vh;
 	}
 
 	.typewriter p {

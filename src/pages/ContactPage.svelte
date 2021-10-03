@@ -2,16 +2,17 @@
 	import { onMount } from "svelte";
 	let greeting = "";
 
-	enum ContactGreeting {
+	let ContactGreeting = [
 		"Greetings Earthling",
 		"Hello There",
 		"Make yourself known",
 		"Heyo",
 		"Feel free to send an owl if that works",
-	}
+	];
 
 	// get contactGreeting length for truly dynamic updating
-	let enumLen = Object.keys(ContactGreeting).length;
+
+	let enumLen = ContactGreeting.length;
 
 	function randNum(min: number, max: number): number {
 		return Math.floor(Math.random() * (max - min + 1) + min);
@@ -19,7 +20,7 @@
 
 	onMount(() => {
 		console.log("contact page loaded.");
-		let enumChoice = randNum(0, enumLen);
+		let enumChoice = randNum(0, enumLen - 1);
 		greeting = ContactGreeting[enumChoice];
 		console.log(enumChoice);
 	});

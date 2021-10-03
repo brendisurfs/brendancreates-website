@@ -29,8 +29,6 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin-left: 1cm;
-		margin-right: 1cm;
 	}
 	.brand a {
 		text-transform: uppercase;
