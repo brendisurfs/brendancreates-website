@@ -7,6 +7,7 @@
 	import ContactPage from "./pages/ContactPage.svelte";
 	import Layout from "./components/Layout.svelte";
 	import VisualsPage from "./pages/VisualsPage.svelte";
+	import BlogPage from "./pages/BlogPage.svelte";
 
 	// routes
 	const routes = {
@@ -15,6 +16,7 @@
 		"/about": AboutPage,
 		"/contact": ContactPage,
 		"/visual": VisualsPage,
+		"/blog": BlogPage,
 	};
 </script>
 

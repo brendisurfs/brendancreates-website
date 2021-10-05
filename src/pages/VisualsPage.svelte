@@ -96,6 +96,7 @@
 	.description {
 		position: absolute;
 		height: 500px;
+		width: 100%;
 		min-width: 240px;
 		max-width: 500px;
 		top: 44%;
@@ -118,7 +119,6 @@
 
 	.description:hover {
 		opacity: 1;
-		/* color */
 		transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
 	}
 	.card-link {

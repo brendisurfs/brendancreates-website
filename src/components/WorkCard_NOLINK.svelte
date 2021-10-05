@@ -2,10 +2,9 @@
     export let about: string;
     export let cardName: string;
     export let cardLink: string;
-    import { link } from 'svelte-spa-router';
 </script>
 
-<a class="card-container" href={cardLink} use:link>
+<a class="card-container" target="_" href={cardLink}>
     <div class="card-name-container">
         <h2 class="card-name">
             {cardName}
