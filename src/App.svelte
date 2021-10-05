@@ -12,11 +12,11 @@
 	// routes
 	const routes = {
 		"/": HomePage,
+		"/blog": BlogPage,
 		"/work": WorkPage,
 		"/about": AboutPage,
 		"/contact": ContactPage,
 		"/visual": VisualsPage,
-		"/blog": BlogPage,
 	};
 </script>
 

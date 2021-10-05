@@ -10,8 +10,8 @@
 
 	const routes: RouteInterface[] = [
 		{ name: "<", route: "/" },
-		{ name: "Blog", route: "/blog" },
 		{ name: "Work", route: "/work" },
+		{ name: "Blog", route: "/blog" },
 		{ name: "About", route: "/about" },
 		{ name: "Contact", route: "/contact" },
 	];
@@ -68,6 +68,7 @@
 		padding: 1em;
 		display: flex;
 		flex-direction: row;
+		/* turn your navbar sideways here */
 		/* writing-mode: sideways-lr; */
 		font-weight: lighter;
 	}

@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { link } from "svelte-spa-router";
-
 	interface SourceInterface {
 		name: string;
 		src: string;
@@ -30,6 +28,8 @@
 	];
 </script>
 
+<h1 id="album-art-title">Album Art Visuals</h1>
+<p class="boxshad">_</p>
 <div class="container">
 	<div class="visuals-layout">
 		{#each imgSrc as image}
@@ -57,6 +57,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+	}
+	#album-art-title {
+		width: 1fr 1fr 1fr;
 	}
 	.visuals-layout {
 		display: grid;
@@ -95,11 +98,13 @@
 	}
 	.description {
 		position: absolute;
-		height: 500px;
+		min-height: 240px;
+		max-height: 500px;
+		height: 76%;
 		width: 100%;
 		min-width: 240px;
 		max-width: 500px;
-		top: 44%;
+		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: white;

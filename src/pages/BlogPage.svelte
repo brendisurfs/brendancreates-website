@@ -1,5 +1,4 @@
 <script lang="ts">
-	import axios from "axios";
 	const testArray: Array<string> = ["one", "two", "three"];
 
 	// add an axios call to the backend to serve up blog posts
@@ -18,9 +17,9 @@
 </script>
 
 <div class="blog-list-container">
-	<h1>this is a blog page</h1>
+	<h1>blog under construction</h1>
 
-	<ul id="blog-list">
+	<!-- <ul id="blog-list">
 		{#each testArray as item}
 			<li class="blog-post">
 				<p>
@@ -28,7 +27,7 @@
 				</p>
 			</li>
 		{/each}
-	</ul>
+	</ul> -->
 </div>
 
 <style>
