@@ -11,7 +11,7 @@
     export let routes: RouteInterface[] = [
         { name: '<', route: '/' },
         { name: 'Work', route: '/work' },
-        { name: 'Blog', route: '/blog' },
+        // { name: 'Blog', route: '/blog' },
         { name: 'About', route: '/about' },
         { name: 'Contact', route: '/contact' },
     ];

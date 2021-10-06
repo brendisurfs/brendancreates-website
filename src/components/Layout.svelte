@@ -9,6 +9,10 @@
     });
 </script>
 
+<!-- meta stuff -->
+<title>BRENDANCREATES</title>
+
+<!-- actual page  -->
 <div class="window-container">
     {#if windowSize <= 640}
         <MobileNav />

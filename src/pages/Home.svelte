@@ -7,7 +7,6 @@
     console.log(messageLength);
 </script>
 
-<title>BRENDANCREATES</title>
 <!-- <Canvas /> -->
 <div class="container">
     <div class="typewriter">
