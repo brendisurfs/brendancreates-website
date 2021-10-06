@@ -1,5 +1,5 @@
 <script lang="ts">
-    console.log('this is the home page');
+    import Canvas from '../components/Canvas.svelte';
 
     let message: string = 'something 3D will be here soon.';
     let messageLength = message.length;
@@ -8,6 +8,7 @@
 </script>
 
 <title>BRENDANCREATES</title>
+<!-- <Canvas /> -->
 <div class="container">
     <div class="typewriter">
         <p>something 3D will be here soon.</p>

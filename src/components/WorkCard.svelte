@@ -24,7 +24,7 @@
         text-decoration: none;
         font-style: normal;
         color: white;
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
