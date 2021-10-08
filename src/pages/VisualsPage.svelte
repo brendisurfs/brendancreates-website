@@ -130,14 +130,14 @@
         height: 4em;
         display: flex;
         flex-direction: row;
-        background: #0062ff;
+        background: #252525;
         align-items: flex-start;
         text-align: center;
     }
     .card-link p {
         text-align: center;
         margin-left: 1em;
-        color: white;
+        color : #0062ff;
     }
     a {
         text-decoration: none;

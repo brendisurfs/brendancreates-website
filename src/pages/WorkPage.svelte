@@ -30,7 +30,7 @@
 
 <div class="work-box">
     <div class="work-path-title">
-        <h2>Choose Your Path</h2>
+        <!-- <h2>Choose Your Path</h2> -->
     </div>
     <div class="container">
         {#each workcardInfo as card}

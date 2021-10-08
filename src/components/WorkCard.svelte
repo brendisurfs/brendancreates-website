@@ -29,11 +29,11 @@
     }
 
     .card-container {
-        background: #151515;
+        background: #252525;
         margin: 1em;
         display: flex;
         flex-direction: column;
-        border: 1px solid white;
+        /* border: 1px solid white; */
         text-align: left;
         height: 50vh;
         min-width: 400px;
@@ -44,9 +44,7 @@
     }
 
     .card-container:hover {
-        border: 1px solid #151515;
-        color: #151515;
-        background: white;
+        background: #555555;
     }
 
     .card-name {

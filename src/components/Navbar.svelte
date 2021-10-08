@@ -8,8 +8,8 @@
         route: string;
     }
 
+    let homeRoute: RouteInterface = { name: '~', route: '/' };
     export let routes: RouteInterface[] = [
-        { name: '<', route: '/' },
         { name: 'Work', route: '/work' },
         // { name: 'Blog', route: '/blog' },
         { name: 'About', route: '/about' },
@@ -25,10 +25,14 @@
         </a>
     </div>
     <div class="navbar-menu">
-        {#each routes as route}
+            <div class="navbar-item">
+                <a href={homeRoute.route} use:link>
+                    <button class="button">  {homeRoute.name} / </button>
+                </a>
+        {#each routes as route }
             <div class="navbar-item">
                 <a href={route.route} use:link>
-                    <button class="button"> {route.name}</button>
+                    <button class="button"> ~/ {route.name}  </button>
                 </a>
             </div>
         {/each}
@@ -41,11 +45,11 @@
     }
     a {
         text-decoration: none;
-        color: black;
+        color: whitesmoke;
     }
     .brand a {
         text-transform: uppercase;
-        color: #151515;
+        color: whitesmoke;
         font-weight: bold;
         font-size: medium;
         display: inline-flex;
@@ -76,7 +80,7 @@
     /* button styling */
 
     button {
-        color: #151515;
+        color: whitesmoke;
         border: none;
         background: none;
     }
