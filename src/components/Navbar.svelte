@@ -8,8 +8,8 @@
         route: string;
     }
 
-    let homeRoute: RouteInterface = { name: '~', route: '/' };
     export let routes: RouteInterface[] = [
+        { name: 'Home', route: '/' },
         { name: 'Work', route: '/work' },
         // { name: 'Blog', route: '/blog' },
         { name: 'About', route: '/about' },
@@ -20,19 +20,17 @@
 <nav class="navbar">
     <div class="brand">
         <a href="/" use:link>
-            <h1>brendancreates</h1>
-            <p>| creative developer</p>
+                <div class="boxed-brand">
+                    <h1>brendancreates</h1>
+                </div>
+                <p> creative developer</p>
         </a>
     </div>
     <div class="navbar-menu">
-            <div class="navbar-item">
-                <a href={homeRoute.route} use:link>
-                    <button class="button">  {homeRoute.name} / </button>
-                </a>
         {#each routes as route }
             <div class="navbar-item">
                 <a href={route.route} use:link>
-                    <button class="button"> ~/ {route.name}  </button>
+                    <button class="button">  {route.name}  </button>
                 </a>
             </div>
         {/each}
@@ -40,12 +38,19 @@
 </nav>
 
 <style>
-    nav {
-        color: #151515;
-    }
+
     a {
         text-decoration: none;
         color: whitesmoke;
+    }
+    .brand {
+        display: flex;
+        flex-direction: row;
+    }
+    .boxed-brand {
+        padding: 0.5em;
+        box-shadow: 1px 0px white;
+
     }
     .brand a {
         text-transform: uppercase;
@@ -56,25 +61,36 @@
         flex-direction: row;
         align-items: center;
     }
+    .brand h1 {
+        margin: 0;
+    }
     .brand p {
-        font-weight: lighter;
+        margin: 0;
         padding: 0.5em;
+        font-weight: lighter;
+        box-shadow: 1px 0px solid white;
     }
     .navbar {
-        margin: 0.5em;
+        z-index: 999;
+        /* margin: 0.5em; */
         display: flex;
         flex-direction: row;
-        align-items: stretch;
+        align-items: center;
         justify-content: space-between;
+        position: absolute;
+        /* left: 0;C */
+        width: 100%;
+        bottom: 1;
     }
 
     .navbar-menu {
-        padding: 1em;
+        padding-right: 2em;
         display: flex;
         flex-direction: row;
         /* turn your navbar sideways here */
         /* writing-mode: sideways-lr; */
         font-weight: lighter;
+        font-size: larger;
     }
 
     /* button styling */
@@ -83,6 +99,7 @@
         color: whitesmoke;
         border: none;
         background: none;
+        margin: 0;
     }
     button:hover {
         color: #0062ff;

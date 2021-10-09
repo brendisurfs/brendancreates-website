@@ -66,7 +66,7 @@
         align-items: center;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        column-gap: 0.5em;
+        /* column-gap: 0.5em; */
     }
     .grid-item {
         background: #151515;
@@ -95,6 +95,7 @@
     img {
         width: 100%;
         height: auto;
+        z-index: 0;
     }
     .description {
         position: absolute;

@@ -23,13 +23,13 @@
     a {
         text-decoration: none;
         font-style: normal;
-        color: white;
+        color: whitesmoke;
         width: 100%;
         height: auto;
     }
 
     .card-container {
-        background: #252525;
+        background: #151515;
         margin: 1em;
         display: flex;
         flex-direction: column;
@@ -44,7 +44,7 @@
     }
 
     .card-container:hover {
-        background: #555555;
+        background: #252525;
     }
 
     .card-name {

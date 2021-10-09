@@ -14,28 +14,29 @@
 
 <!-- actual page  -->
 <div class="window-container">
-    {#if windowSize <= 640}
+    <div>
+
+        {#if windowSize <= 705}
         <MobileNav />
-    {/if}
-    {#if windowSize > 640}
+        {:else if windowSize > 705}
         <Navbar />
-    {/if}
-    <div class="content">
+        {/if}
+    </div>
+    <div class="spacer">
+
+    </div>
+    <div>
         <slot />
     </div>
-    <Footer />
 </div>
 
 <style>
     .window-container {
-        display: flex;
-        flex-direction: column;
         padding: 0.5em;
+       justify-content: space-between; 
     }
-    .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
+    .spacer {
+        height: 5%;
+        width: 100%;
     }
 </style>
