@@ -26,13 +26,13 @@
     }
     /* typewriter effect */
     .typewriter {
-        position: absolute;
         position: relative;
         text-align: center;
         align-items: center;
         display: flex;
         justify-content: center;
         height: 50vh;
+        transform: translate(0em, -5em);
     }
     
     .typewriter p {

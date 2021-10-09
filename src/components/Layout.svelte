@@ -8,6 +8,7 @@
 
     // overlay var
     import {overlay } from "../store"
+import Canvas from './Canvas.svelte';
 
 
     function closeMobileMenu(): void {
@@ -50,11 +51,16 @@
             </ul>
         </div>
     </div>
+
+    <Canvas/>
+    <!-- canvas section for background 3d -->
     <div class={$overlay ? "blurred-slot":""}>
         <slot  />
     </div>
 </div>
 
+
+<!-- STYLING -->
 <style>
     .window-container {
         padding: 0.5em;
@@ -65,6 +71,10 @@
         width: 100%;
         /* border: 1px solid red; */
     }
+
+
+
+
     /* overlay mobile menu */
     .overlay {
         z-index: 1;
@@ -76,7 +86,6 @@
         top: 0;
         
         /* transform: translate(50%, 50%); */
-        
         overflow-x: hidden;
         transition: 0.4s ;
         
@@ -84,7 +93,7 @@
         background: rgba(12,12,12,0.87);
         backdrop-filter: blur(4px);
     }
-
+/* overlay blurring */
     .blurred-slot {
         filter: blur(4px);
     }
@@ -113,6 +122,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        
     }
+
+    /* 3d CANVAS  */
 </style>

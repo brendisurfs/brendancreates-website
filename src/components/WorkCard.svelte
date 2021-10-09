@@ -58,7 +58,7 @@
         color: white;
         width: 90%;
         height: 20%;
-        font-size: large;
+        font-size: x-large;
     }
     .about-text p {
         padding: 0.5em;

@@ -1,6 +1,5 @@
 <script lang="ts">
     import Router from 'svelte-spa-router';
-    import {fade} from "svelte/transition"
     // pages
     import HomePage from './pages/Home.svelte';
     import AboutPage from './pages/AboutPage.svelte';
@@ -19,6 +18,10 @@
         '/contact': ContactPage,
         '/visual': VisualsPage,
     };
+
+
+    console.log(window.navigator.userAgent);
+    
 </script>
 
 <main>
@@ -29,14 +32,10 @@
 
 <style>
     main {
-        /* display: flex; */
-        /* flex-direction: column; */
         margin: 0;
         height: 100%;
         width: 100%;
         text-align: center;
-        background-color: #111111;
-        overflow: scroll;
     }
 
     @media (min-width: 640px) {
