@@ -1,3 +1,10 @@
+/* 
+TODO: 
+	- Add mobile device orientation controls to page.
+	- clean up cube rotation. 
+	- add particle background again.
+*/
+
 import * as THREE from "three";
 
 let renderer: THREE.WebGLRenderer;
@@ -15,7 +22,7 @@ const cursorLocation = {
 	y: 0,
 };
 
-window.addEventListener("mousemove", (event: any) => {
+window.addEventListener("mousemove", (event: MouseEvent) => {
 	cursorLocation.x = event.clientX / sizes.width - 0.5;
 	cursorLocation.y = -(event.clientY / sizes.height - 0.5);
 });
@@ -36,17 +43,19 @@ const mats = new THREE.MeshNormalMaterial();
 const cube = new THREE.Mesh(geometry, mats);
 
 scene.add(cube);
-
+{
+	cube.rotation.y = 4;
+}
 scene.background = new THREE.Color("#111111");
 
 // animateRender - updates our render window and moves any meshes we specify.
 function animateRender(): void {
 	requestAnimationFrame(animateRender);
 	// cube.rotation.y += 0.01;
-
 	camera.position.x = Math.sin(cursorLocation.x * Math.PI) * -1;
 	camera.position.y = Math.cos(cursorLocation.y * Math.PI);
 	camera.lookAt(cube.position);
+
 	renderer.render(scene, camera);
 }
 
@@ -59,7 +68,6 @@ function resizeRender() {
 }
 // CreateScene - creates our compiled threejs scene to export to a component.
 export function CreateScene(threecanvas: any) {
-	requestAnimationFrame(CreateScene);
 	renderer = new THREE.WebGLRenderer({
 		antialias: true,
 		canvas: threecanvas,
