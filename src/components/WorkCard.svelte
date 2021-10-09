@@ -57,7 +57,7 @@
         background: #0062ff;
         color: white;
         width: 90%;
-        height: 20%;
+        height: 2.2em;
         font-size: x-large;
     }
     .about-text p {
