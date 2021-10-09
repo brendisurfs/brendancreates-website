@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
     console.log('this is the navbar');
 
     import { link } from 'svelte-spa-router';
@@ -76,6 +76,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+       margin-top: 1em; 
         justify-content: space-between;
         position: absolute;
         /* left: 0;C */
@@ -106,6 +107,6 @@
     }
     button:active {
         background: none;
-        color: blue;
+        color: #0022ff;
     }
 </style>

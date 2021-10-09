@@ -30,7 +30,7 @@
 
     .card-container {
         background: #151515;
-        margin: 1em;
+        margin: 0.5em;
         display: flex;
         flex-direction: column;
         /* border: 1px solid white; */
@@ -57,10 +57,13 @@
         width: 90%;
         height: 20%;
         font-size: large;
-        text-align: start;
     }
     .about-text p {
         padding: 0.5em;
+        margin: 0;
+        text-align: start;
+
+
     }
     .about-text:hover {
         background: rgb(0, 81, 212);

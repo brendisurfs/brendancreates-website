@@ -1,6 +1,8 @@
 <script lang="ts">
 	console.log("this is the about page");
 
+	import {fly} from "svelte/transition"
+
 	// components
 	import Markdown from "../components/Markdown.svelte";
 
@@ -9,7 +11,8 @@
 	import techMarkdown from "../markdown/tech.md";
 </script>
 
-<div class="md-container">
+<!-- page -->
+<div class="md-container" in:fly="{{y: 200, duration: 200, delay: 100 }}">
 	<div class="md-section">
 		<Markdown markdown={aboutMarkdown} />
 	</div>
@@ -18,6 +21,7 @@
 	</div>
 </div>
 
+<!-- style -->
 <style>
 	.md-container {
 		display: flex;

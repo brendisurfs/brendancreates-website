@@ -1,4 +1,7 @@
 <script lang="ts">
+
+    import {fly} from "svelte/transition"
+
     interface SourceInterface {
         name: string;
         src: string;
@@ -8,7 +11,7 @@
 
     let imgSrc: SourceInterface[] = [
         {
-            name: 'Yula Album Art - A Narrow Road',
+            name: 'Yula - A Narrow Road',
             src: './images/anarrowroad_web.jpg',
             link: 'https://soundcloud.com/officialyula/anarrowroad',
             desc: 'Role - create visual concept for cover art. Box out, dress, texture, and render scene.',
@@ -20,7 +23,7 @@
             desc: 'Role - Create 3D scene based off of references provided.',
         },
         {
-            name: 'Yula Album Art - Live Free',
+            name: 'Yula - Live Free',
             src: './images/livefree_web.jpg',
             link: 'https://soundcloud.com/officialyula/livefree',
             desc: 'Role - Create a visual concept and final render for the song release, based off of the music video for the song.',
@@ -28,24 +31,24 @@
     ];
 </script>
 
-<h1 id="album-art-title">Album Art Visuals</h1>
-<p class="boxshad">_</p>
-<div class="container">
+<!-- <h1 id="album-art-title">Album Art Visuals</h1> -->
+<br><br><br>
+<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}">
     <div class="visuals-layout">
         {#each imgSrc as image}
-            <div class="grid-item">
-                <img class="image-item" src={image.src} alt="artwork" />
-                <div class="description">
+            <div class="grid-item ">
+                <img class="image-item sibling-blur" src={image.src} alt="artwork" />
+                <div class="description sibling-hover">
                     <h2>
                         {image.name}
                     </h2>
                     <p>{image.desc}</p>
                 </div>
-                <a target="_blank" href={image.link}>
+                <!-- <a target="_blank" href={image.link}>
                     <div class="card-link">
                         <p>listen here</p>
                     </div>
-                </a>
+                </a> -->
             </div>
         {/each}
     </div>
@@ -69,11 +72,10 @@
         /* column-gap: 0.5em; */
     }
     .grid-item {
-        background: #151515;
+        /* background: #151515; */
         position: relative;
         min-width: 240px;
         max-width: 500px;
-        margin: 1em;
         text-align: center;
     }
     .visuals-layout div:last-child:nth-child(3n -1) {
@@ -95,13 +97,15 @@
     img {
         width: 100%;
         height: auto;
-        z-index: 0;
     }
+
+    
+    /* card description goes here */
     .description {
         position: absolute;
-        min-height: 240px;
+        min-height: 500px;
         max-height: 500px;
-        height: 76%;
+        height: 50%;
         width: 100%;
         min-width: 240px;
         max-width: 500px;
@@ -109,7 +113,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        background: linear-gradient(rgba(184, 184, 184, 0), #151515);
+        background: linear-gradient(rgba(184, 184, 184, 0), #111111);
         opacity: 0;
         display: flex;
         align-items: center;
@@ -127,6 +131,11 @@
         opacity: 1;
         transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
     }
+
+    .sibling-hover:hover + .sibling-blur { 
+         filter: blur(4px);
+    }
+
     .card-link {
         height: 4em;
         display: flex;

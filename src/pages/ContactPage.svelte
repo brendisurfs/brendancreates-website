@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
+	import {fly} from "svelte/transition"
 	let greeting = "";
 
 	let ContactGreeting = [
@@ -45,10 +46,10 @@
 	}
 </script>
 
-<div class="container">
+<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}">
 	<div class="form-flex">
 		<div class="title-container">
-			<h1>Contact</h1>
+			<h1 id="contact">Contact</h1>
 			<p id="greeting">{greeting}</p>
 			<div class="email-section">
 				<h2 id="email-tag">brendan.prednis@pm.me</h2>
@@ -110,10 +111,15 @@
 		min-height: 90vh;
 		font-size: larger;
 	}
+
+	#contact {
+		padding:0;
+		margin: 0;
+	}
+
 	.title-container {
 		position: relative;
 
-		transform: translate(1%, -10%);
 		text-align: left;
 	}
 	.form-flex {

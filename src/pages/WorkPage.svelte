@@ -5,6 +5,8 @@
     import WorkCard from '../components/WorkCard.svelte';
     import WorkCardNolink from '../components/WorkCard_NOLINK.svelte';
 
+    import {fade, fly} from "svelte/transition"
+
     type CardInfo = {
         cardName: string;
         about: string;
@@ -28,7 +30,7 @@
     ];
 </script>
 
-<div class="work-box">
+<div class="work-box" in:fly="{{y: 200, duration: 200, delay: 100}}" >
     <div class="work-path-title">
         <!-- <h2>Choose Your Path</h2> -->
     </div>
@@ -48,13 +50,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background: #111111;
     }
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        padding: 1rem;
+        height: 80vh;
     }
     @media (max-width: 760px) {
         .container {
