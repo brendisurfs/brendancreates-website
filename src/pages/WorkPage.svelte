@@ -30,7 +30,7 @@
     ];
 </script>
 
-<div class="work-box" in:fly="{{y: 200, duration: 200, delay: 100}}" >
+<div class="work-box" in:fly="{{y: 200, duration: 200, delay: 100}}" out:fade="{{duration: 100}}">
     <div class="work-path-title">
         <!-- <h2>Choose Your Path</h2> -->
     </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import {fly} from "svelte/transition"
+	import {fly, fade} from "svelte/transition"
 	let greeting = "";
 
 	let ContactGreeting = [
@@ -26,6 +26,8 @@
 		console.log(enumChoice);
 	});
 
+	// TODO: EMAIL REST API
+	// FormType - form interface for REST API email backend. 
 	type FormType = {
 		firstName: string;
 		lastName: string;
@@ -46,7 +48,7 @@
 	}
 </script>
 
-<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}">
+<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}" out:fade="{{duration: 100}}">
 	<div class="form-flex">
 		<div class="title-container">
 			<h1 id="contact">Contact</h1>
@@ -123,6 +125,7 @@
 		text-align: left;
 	}
 	.form-flex {
+		box-shadow: 0px -1px white;
 		background: #151515;
 		color: white;
 		height: 70ch;

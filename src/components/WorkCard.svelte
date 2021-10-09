@@ -29,11 +29,13 @@
     }
 
     .card-container {
+        box-shadow: 0px -1px white;
         background: #151515;
+
         margin: 0.5em;
         display: flex;
         flex-direction: column;
-        /* border: 1px solid white; */
+        
         text-align: left;
         height: 50vh;
         min-width: 400px;

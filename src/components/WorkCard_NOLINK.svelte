@@ -29,6 +29,7 @@
 
     .card-container {
         background: #151515;
+        box-shadow: 0px -1px white;
         
         margin: 0.5em;
         display: flex;

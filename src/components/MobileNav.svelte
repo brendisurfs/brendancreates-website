@@ -3,7 +3,8 @@
     
 
     // overlay global
-    import {overlay} from "../store"
+    import {overlay } from "../store"
+    
     
     // showMenu - toggles the menu display on or off
     // exporting to layout to be able to click out of it
@@ -11,12 +12,11 @@
         overlay.set(!$overlay);
         console.log("overlay value: ", $overlay);
         
-        
     }
 </script>
 
 <!-- modify to open and close -->
-<nav class="container">
+<nav class={$overlay ? "container blurred-spot": "container"}>
     <div class="brand">
         <a href="/" use:link>
             <h1>brendancreates</h1>
@@ -73,5 +73,8 @@
         padding: 1em;
         font-size: x-large;
         font-weight: 600;
+    }
+    .blurred-spot {
+        filter: blur(4px);
     }
 </style>

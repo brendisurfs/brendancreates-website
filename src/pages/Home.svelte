@@ -9,7 +9,7 @@
 </script>
 
 <!-- <Canvas /> -->
-<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}" >
+<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}" out:fade="{{duration: 100}}">
 
     <div class="typewriter">
         <p>something 3D will be here soon.</p>

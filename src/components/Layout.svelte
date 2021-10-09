@@ -2,13 +2,13 @@
     import MobileNav from './MobileNav.svelte';
     import Navbar from './Navbar.svelte';
     import {link} from "svelte-spa-router"
-    import {fade} from "svelte/transition"
 
     import {routes} from "./Navbar.svelte";
 
 
     // overlay var
-    import {overlay} from "../store"
+    import {overlay } from "../store"
+
 
     function closeMobileMenu(): void {
         $overlay = false;
@@ -24,9 +24,8 @@
 <title>BRENDANCREATES</title>
 
 <!-- actual page  -->
-<div class="window-container" >
+<div class="window-container">
     <div>
-
         {#if windowSize <= 705}
         <MobileNav />
         {:else if windowSize > 705}
@@ -34,10 +33,11 @@
         {/if}
     </div>
     <div class="spacer">
-
     </div>
-    <div on:click="{closeMobileMenu}" class={$overlay ? "overlay":"hidden"} in:fade>
-        <div class={$overlay ? "overlay-content": "hidden"} in:fade>
+
+    <!-- Overlay Menu -->
+    <div on:click="{closeMobileMenu}" class={$overlay ? "overlay":"hidden"} >
+        <div class={$overlay ? "overlay-content": "hidden"} >
             <ul >
                 {#each routes as route}
                     
@@ -50,7 +50,7 @@
             </ul>
         </div>
     </div>
-    <div class="fixed-slot">
+    <div class={$overlay ? "blurred-slot":""}>
         <slot  />
     </div>
 </div>
@@ -81,14 +81,21 @@
         transition: 0.4s ;
         
         color: white;
-        background: rgba(12,12,12,0.97);
+        background: rgba(12,12,12,0.87);
+        backdrop-filter: blur(4px);
     }
+
+    .blurred-slot {
+        filter: blur(4px);
+    }
+
     .overlay-content {
         position: relative; 
         top: 25%;
         width: 100%;
         text-align: center;
-        transition: 0.4s ;
+        transition: 0.4s;
+
     }
     .overlay-content ul {
         list-style-type: none;
@@ -102,7 +109,6 @@
     .hidden {
         visibility: hidden;
         position: absolute;
-        
         width: 100%;
         height: 100%;
         left: 0;

@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import {fly} from "svelte/transition"
+    import {fly, fade} from "svelte/transition"
 
     interface SourceInterface {
         name: string;
@@ -33,7 +33,7 @@
 
 <!-- <h1 id="album-art-title">Album Art Visuals</h1> -->
 <br><br><br>
-<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}">
+<div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}" out:fade="{{duration: 100}}">
     <div class="visuals-layout">
         {#each imgSrc as image}
             <div class="grid-item ">
@@ -73,6 +73,7 @@
     }
     .grid-item {
         /* background: #151515; */
+		box-shadow: 0px -1px white;
         position: relative;
         min-width: 240px;
         max-width: 500px;
