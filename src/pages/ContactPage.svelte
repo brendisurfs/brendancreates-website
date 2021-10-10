@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import {fly, fade} from "svelte/transition"
+
 	let greeting = "";
+	let successMessage: string;
+	let submitValue = false;
 
 	let ContactGreeting = [
 		"Greetings Earthling",
@@ -29,23 +32,41 @@
 	// TODO: EMAIL REST API
 	// FormType - form interface for REST API email backend. 
 	type FormType = {
-		firstName: string;
-		lastName: string;
+		name: string;
 		email: string;
 		subject: string;
-		text: string;
+		message: string;
 	};
 
-	async function handleSubmit(e: any) {
-		const formData: FormData = new FormData(e.target);
-
-		let data = {};
-		for (let field of formData) {
-			const [key, value] = field;
-			data[key] = value;
-		}
-		console.log(data);
+	let formValues: FormType = {
+		name: "",
+		email: "",
+		subject: "",
+		message: "",
 	}
+
+
+
+	// handle form submission
+	function handleSubmit() {
+		console.log(formValues.name,formValues.email );
+
+		fetch("http://127.0.0.1:8080/api/submit", {
+			method: "POST", 
+			headers: {
+				"Content-Type": "application/json; charset=UTF-8"
+			},
+			body: JSON.stringify(formValues),
+		}).then(res => {
+			if (res.status === 200) {
+				submitValue = true;
+
+			}
+		})
+
+		successMessage = "contact submission successful"
+	}
+	
 </script>
 
 <div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}" out:fade="{{duration: 100}}">
@@ -56,50 +77,53 @@
 			<div class="email-section">
 				<h2 id="email-tag">brendan.prednis@pm.me</h2>
 				<p>(currently over-engineering the contact form)</p>
+			<span class={submitValue ? "success-msg": "hidden"}>
+				{successMessage}
+			</span>
 			</div>
 			<br /><br /><br />
 		</div>
 
-		<form on:submit|preventDefault={handleSubmit}>
+		<form method="POST" on:submit|preventDefault={handleSubmit}>
 			<label for="name">Name*</label>
 			<input
-				disabled
 				required
 				type="text"
 				id="name"
 				aria-label="name box"
 				placeholder="name"
+				bind:value={formValues.name}
 			/>
 
 			<label for="email-input">Email*</label>
 			<input
-				disabled
 				required
 				type="email"
 				id="email-input"
 				placeholder="gonesurfing@brendan.com"
+				bind:value={formValues.email}
 			/>
 			<label for="subject-input">Subject*</label>
 			<input
-				disabled
 				required
 				type="text"
 				id="subject-input"
 				placeholder="Subject"
+				bind:value={formValues.subject}
 			/>
 			<br />
 			<br />
 			<label for="message-input">Message*</label>
 			<textarea
-				disabled
 				required
 				type="textarea"
 				id="message-input"
 				placeholder="say something nice"
 				aria-label="contact message"
+				bind:value={formValues.message}
 			/>
 			<br />
-			<input disabled type="submit" value="Submit" />
+			<input type="submit" value="Submit" class="submit-btn" />
 		</form>
 	</div>
 </div>
@@ -152,6 +176,7 @@
 	input[type="submit"] {
 		text-align: left;
 		background: #0062ff;
+		color: whitesmoke;
 		border: none;
 	}
 	input[type="submit"],
@@ -175,5 +200,24 @@
 	}
 	#greeting {
 		font-weight: 300;
+	}
+	.submit-btn:active{
+		background: #0022ff
+	}
+	
+	.success-msg {
+		position: absolute;
+		color: white;
+		background: green;
+
+		left: 0;
+		bottom: 0;
+
+		width: 50%;
+		height: 50%;
+		transform: translate(50%, 0);
+	}
+	.hidden {
+		visibility: hidden;
 	}
 </style>
