@@ -23,7 +23,7 @@
                 <div class="boxed-brand">
                     <h1>brendancreates</h1>
                 </div>
-                <p> creative developer</p>
+                <p> Developer | creative director | 3D Artist</p>
         </a>
     </div>
     <div class="navbar-menu">

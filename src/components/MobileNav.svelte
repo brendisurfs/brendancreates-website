@@ -20,10 +20,12 @@
     <div class="brand">
         <a href="/" use:link>
             <h1>brendancreates</h1>
-            <p> creative developer</p>
+                <p> Developer | creative director | 3D Artist</p>
         </a>
     </div>
-    <button class="mobile-menu" on:click={showMenu}> Menu </button>
+    <button class="mobile-menu" on:click={showMenu}> 
+        {$overlay ? "x" : "+"}
+    </button>
 </nav>
 
 <style>
@@ -70,9 +72,9 @@
         justify-content: center;
         color: whitesmoke;
         margin: 0;
-        padding: 1em;
-        font-size: x-large;
-        font-weight: 600;
+        padding-right: 1em;
+        font-size: 2em;
+        font-weight: normal;
     }
     .blurred-spot {
         filter: blur(4px);

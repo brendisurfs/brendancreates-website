@@ -19,9 +19,6 @@
         '/visual': VisualsPage,
     };
 
-
-    console.log(window.navigator.userAgent);
-    
 </script>
 
 <main>

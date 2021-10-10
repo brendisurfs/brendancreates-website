@@ -28,7 +28,7 @@
 	p {
 		color: white;
 		text-align: left;
-		font-size: 20px;
+		font-size: 17px;
 		inline-size: 60vw;
 	}
 </style>

@@ -57,7 +57,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        height: 80vh;
+        height: 70vh;
     }
     @media (max-width: 760px) {
         .container {

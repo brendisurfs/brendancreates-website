@@ -1,17 +1,28 @@
 import * as THREE from "three";
+import { DeviceOrientationControls } from "three/examples/jsm/controls/DeviceOrientationControls";
 
-const geo = new THREE.BufferGeometry();
+const pcount = 160;
 
-let positions = [];
-let positions2 = [];
+// geometry
 
-let n = 1000;
+const positions = new Float32Array(pcount * 3);
 
-for (let i = 0; i < n; i++) {
-	let x = Math.random() * n;
-	let y = Math.random() * n;
-	let z = Math.random() * n;
-
-	positions.push(x, y, z);
-	positions2.push(x, y, z);
+for (let i = 0; i < pcount * 3; i++) {
+	positions[i] = (Math.random() - 0.5) * 10;
 }
+
+// we add a 3 for item size to group in 3s for the vertices.
+let particleBufferAttribute = new THREE.BufferAttribute(positions, 3);
+
+const particleGeometry = new THREE.BufferGeometry();
+{
+	particleGeometry.setAttribute("position", particleBufferAttribute);
+}
+
+const pointsMaterial = new THREE.PointsMaterial();
+{
+	pointsMaterial.size = 0.02;
+	pointsMaterial.sizeAttenuation = true;
+}
+// points
+export const particles = new THREE.Points(particleGeometry, pointsMaterial);

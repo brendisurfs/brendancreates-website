@@ -7,6 +7,9 @@ TODO:
 
 import * as THREE from "three";
 
+// external imports
+import { particles } from "./ThreeSnow";
+
 let renderer: THREE.WebGLRenderer;
 
 const sizes = {
@@ -42,19 +45,34 @@ const geometry = new THREE.BoxGeometry();
 const mats = new THREE.MeshNormalMaterial();
 const cube = new THREE.Mesh(geometry, mats);
 
-scene.add(cube);
 {
 	cube.rotation.y = 4;
 }
 scene.background = new THREE.Color("#111111");
 
+//Add to scene here
+//	|
+//	v
+// scene.add(cube);
+scene.add(particles);
+
+/*
+ *
+ *
+ * v-------------------FUNCTIONS----------------------v
+ * |
+ * |
+ * v
+ */
 // animateRender - updates our render window and moves any meshes we specify.
 function animateRender(): void {
 	requestAnimationFrame(animateRender);
 	// cube.rotation.y += 0.01;
-	camera.position.x = Math.sin(cursorLocation.x * Math.PI) * -1;
-	camera.position.y = Math.cos(cursorLocation.y * Math.PI);
+	camera.position.x = Math.sin(cursorLocation.x * Math.PI * -1) * 0.15;
+	camera.position.y = Math.sin(cursorLocation.y * Math.PI * -1) * 0.15;
 	camera.lookAt(cube.position);
+
+	particles.rotation.y += 0.001;
 
 	renderer.render(scene, camera);
 }

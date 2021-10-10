@@ -78,7 +78,7 @@ import Canvas from './Canvas.svelte';
     /* overlay mobile menu */
     .overlay {
         z-index: 1;
-        position: absolute;
+        position: fixed;
         
         width: 100%;
         height: 100%;
@@ -87,29 +87,31 @@ import Canvas from './Canvas.svelte';
         
         /* transform: translate(50%, 50%); */
         overflow-x: hidden;
-        transition: 0.4s ;
+        transition: 0.2s ;
         
         color: white;
         background: rgba(12,12,12,0.87);
         backdrop-filter: blur(4px);
     }
-/* overlay blurring */
+    /* overlay blurring */
     .blurred-slot {
         filter: blur(4px);
     }
-
+    
     .overlay-content {
+        /* transform: translate(-24px, 0); */
         position: relative; 
         top: 25%;
         width: 100%;
         text-align: center;
-        transition: 0.4s;
+        transition: 0.2s;
 
     }
     .overlay-content ul {
         list-style-type: none;
+        
         font-size: 3em;
-        font-weight: bolder;
+        font-weight: normal;
     }
     .mobile-list-item a {
         color: whitesmoke;
