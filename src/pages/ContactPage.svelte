@@ -47,9 +47,10 @@
 
 
 
-	// handle form submission
+	//handleSubmit - handles form data, sends to backend.
+	//	|
+	//	v
 	function handleSubmit() {
-		console.log(formValues.name,formValues.email );
 
 		fetch("http://127.0.0.1:8080/api/submit", {
 			method: "POST", 
@@ -57,14 +58,21 @@
 				"Content-Type": "application/json; charset=UTF-8"
 			},
 			body: JSON.stringify(formValues),
-		}).then(res => {
+		})
+		.then(res => {
 			if (res.status === 200) {
 				submitValue = true;
-
-			}
+			// clear the form after successful submit.
+			Object.keys(formValues).map(key => {
+				formValues[key] = "";	
+			})} 
 		})
-
-		successMessage = "contact submission successful"
+		.catch(err => {
+			submitValue = false;
+			console.log(err);
+		}).finally(() => {
+			successMessage = "contact submission successful"
+		});
 	}
 	
 </script>
