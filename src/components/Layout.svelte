@@ -63,7 +63,7 @@ import Canvas from './Canvas.svelte';
 <!-- STYLING -->
 <style>
     .window-container {
-        padding: 0.5em;
+        /* padding: 0.5em; */
         justify-content: space-between; 
     }
     .spacer {

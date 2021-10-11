@@ -72,8 +72,6 @@ function animateRender(): void {
 	camera.position.y = Math.sin(cursorLocation.y * Math.PI * -1) * 0.15;
 	camera.lookAt(cube.position);
 
-	particles.rotation.y += 0.001;
-
 	renderer.render(scene, camera);
 }
 

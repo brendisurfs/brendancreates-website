@@ -8,7 +8,7 @@
         route: string;
     }
 
-    export let routes: RouteInterface[] = [
+    export const routes: RouteInterface[] = [
         { name: 'Home', route: '/' },
         { name: 'Work', route: '/work' },
         // { name: 'Blog', route: '/blog' },
@@ -23,7 +23,7 @@
                 <div class="boxed-brand">
                     <h1>brendancreates</h1>
                 </div>
-                <p> Developer | creative director | 3D Artist</p>
+                    <p> Developer | creative director | 3D Artist</p>
         </a>
     </div>
     <div class="navbar-menu">
@@ -70,6 +70,7 @@
         font-weight: lighter;
         box-shadow: 1px 0px solid white;
     }
+    
     .navbar {
         z-index: 999;
         /* margin: 0.5em; */
@@ -77,9 +78,9 @@
         flex-direction: row;
         align-items: center;
        margin-top: 1em; 
+       padding: 1em;
         justify-content: space-between;
         position: absolute;
-        /* left: 0;C */
         width: 100%;
         bottom: 1;
     }
@@ -107,6 +108,6 @@
     }
     button:active {
         background: none;
-        color: #0022ff;
+        color: #0001ff;
     }
 </style>

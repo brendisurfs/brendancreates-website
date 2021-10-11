@@ -20,7 +20,7 @@
     <div class="brand">
         <a href="/" use:link>
             <h1>brendancreates</h1>
-                <p> Developer | creative director | 3D Artist</p>
+            <p> Developer | creative director | 3D Artist</p>
         </a>
     </div>
     <button class="mobile-menu" on:click={showMenu}> 
@@ -44,19 +44,20 @@
         align-items: center;
         margin: 0;
         width: 100%;
+        z-index: 4;
     }
     .brand h1 {
         margin: 0;
-
     }
     .brand a {
+        margin: 1em;
         text-transform: uppercase;
         color: whitesmoke;
         font-weight: bold;
         font-size: small;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
     .brand p {
         font-weight: lighter;
@@ -77,6 +78,6 @@
         font-weight: normal;
     }
     .blurred-spot {
-        filter: blur(4px);
+        filter: blur(2px);
     }
 </style>

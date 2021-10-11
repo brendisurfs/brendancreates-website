@@ -54,7 +54,7 @@
         font-size: 2rem;
     }
     .about-text {
-        background: #0062ff;
+		background: #0022ff;
         color: white;
         width: 90%;
         height: 2.2em;

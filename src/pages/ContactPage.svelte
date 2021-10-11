@@ -6,6 +6,9 @@
 	let successMessage: string;
 	let submitValue = false;
 
+	// submit btn value to change
+	let submitButtonValue = "Submit";
+
 	let ContactGreeting = [
 		"Greetings Earthling",
 		"Hello There",
@@ -62,6 +65,7 @@
 		.then(res => {
 			if (res.status === 200) {
 				submitValue = true;
+				submitButtonValue = "Submission successful";
 			// clear the form after successful submit.
 			Object.keys(formValues).map(key => {
 				formValues[key] = "";	
@@ -74,20 +78,20 @@
 			successMessage = "contact submission successful"
 		});
 	}
-	
 </script>
 
+<!-- PAGE -->
 <div class="container" in:fly="{{y: 200, duration: 200, delay: 100 }}" out:fade="{{duration: 100}}">
 	<div class="form-flex">
 		<div class="title-container">
 			<h1 id="contact">Contact</h1>
 			<p id="greeting">{greeting}</p>
 			<div class="email-section">
-				<h2 id="email-tag">brendan.prednis@pm.me</h2>
+				<!-- <h2 id="email-tag">brendan.prednis@pm.me</h2> -->
 				<p>(currently over-engineering the contact form)</p>
-			<span class={submitValue ? "success-msg": "hidden"}>
+			<!-- <span class={submitValue ? "success-msg": "hidden"}>
 				{successMessage}
-			</span>
+			</span> -->
 			</div>
 			<br /><br /><br />
 		</div>
@@ -131,12 +135,13 @@
 				bind:value={formValues.message}
 			/>
 			<br />
-			<input type="submit" value="Submit" class="submit-btn" />
+			<input type="submit" value={submitButtonValue} class={submitValue ? "submit-success" : "submit-btn"} />
 		</form>
 	</div>
 </div>
 
 <style>
+
 	.container {
 		padding: 1em;
 		display: flex;
@@ -181,12 +186,6 @@
 		width: 100%;
 		resize: none;
 	}
-	input[type="submit"] {
-		text-align: left;
-		background: #0062ff;
-		color: whitesmoke;
-		border: none;
-	}
 	input[type="submit"],
 	input[type="text"],
 	input[type="email"] {
@@ -209,23 +208,31 @@
 	#greeting {
 		font-weight: 300;
 	}
-	.submit-btn:active{
-		background: #0022ff
-	}
 	
-	.success-msg {
+	/* .success-msg {
 		position: absolute;
 		color: white;
 		background: green;
-
+		
 		left: 0;
 		bottom: 0;
-
+		
 		width: 50%;
 		height: 50%;
 		transform: translate(50%, 0);
+	} */
+	input[type="submit"] {
+		text-align: left;
+		color: whitesmoke;
+		border: none;
 	}
-	.hidden {
+	.submit-btn {
+		background: #0022ff;
+	}
+	.submit-success {
+		background: #198038;
+	}
+	/* .hidden {
 		visibility: hidden;
-	}
+	} */
 </style>
