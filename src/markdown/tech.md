@@ -8,26 +8,28 @@ Current OS: **Manjaro**.
 
 **I am comfortable with**:
 
-- React
+- GORM
 - Next.js
 - Node.js
-- Express
-- Chakra-UI
-- Styled Components
+- React.js
+- Express.js
 - PrismaORM
-- GORM
+- PostgresQL
+- Chakra - UI
+- Styled Components
 
 **I want to learn more about**:
 
+- Software security
 - net/http package
-- Websockets
+- Shell scripting
 - OSL
 - Vue
 - Qt
 
 **Other tools I use:**
 
-- SideFX Houdini
 - Redshift Renderer
+- SideFX Houdini
 - Touchdesigner
 - Volta

@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import { onMount } from "svelte";
 	import {fly, fade} from "svelte/transition"
 
@@ -18,7 +19,6 @@
 	];
 
 	// get contactGreeting length for truly dynamic updating
-
 	let enumLen = ContactGreeting.length;
 
 	function randNum(min: number, max: number): number {
@@ -31,7 +31,14 @@
 		greeting = ContactGreeting[enumChoice];
 		console.log(enumChoice);
 	});
-
+/*
+*
+*
+* v-------------------EMAIL SEND SECTION----------------------v
+* |
+* |
+* v
+*/
 	// TODO: EMAIL REST API
 	// FormType - form interface for REST API email backend. 
 	type FormType = {
@@ -48,36 +55,34 @@
 		message: "",
 	}
 
-
-
 	//handleSubmit - handles form data, sends to backend.
 	//	|
 	//	v
-	function handleSubmit() {
-
-		fetch("http://127.0.0.1:8080/api/submit", {
+	async function handleSubmit() {
+		let response = await fetch("http://127.0.0.1:8080/api/submit", {
 			method: "POST", 
 			headers: {
 				"Content-Type": "application/json; charset=UTF-8"
 			},
 			body: JSON.stringify(formValues),
-		})
-		.then(res => {
-			if (res.status === 200) {
+		});
+		let responseStatus= response.status;
+		let responseText = await response.text();
+		console.log(responseStatus, responseText);
+
+		if (responseStatus == 200) {
 				submitValue = true;
 				submitButtonValue = "Submission successful";
 			// clear the form after successful submit.
 			Object.keys(formValues).map(key => {
 				formValues[key] = "";	
-			})} 
-		})
-		.catch(err => {
+			})
+		} else {
 			submitValue = false;
-			console.log(err);
-		}).finally(() => {
-			successMessage = "contact submission successful"
-		});
+			submitButtonValue = "could not send contact."	
+		}
 	}
+		
 </script>
 
 <!-- PAGE -->
@@ -89,6 +94,7 @@
 			<div class="email-section">
 				<!-- <h2 id="email-tag">brendan.prednis@pm.me</h2> -->
 				<p>(currently over-engineering the contact form)</p>
+				<p>contact me on <a href="https://www.linkedin.com/in/brendancreates/">Linkedin</a></p>
 			<!-- <span class={submitValue ? "success-msg": "hidden"}>
 				{successMessage}
 			</span> -->
@@ -100,6 +106,7 @@
 			<label for="name">Name*</label>
 			<input
 				required
+				disabled
 				type="text"
 				id="name"
 				aria-label="name box"
@@ -109,6 +116,7 @@
 
 			<label for="email-input">Email*</label>
 			<input
+				disabled
 				required
 				type="email"
 				id="email-input"
@@ -118,6 +126,7 @@
 			<label for="subject-input">Subject*</label>
 			<input
 				required
+				disabled
 				type="text"
 				id="subject-input"
 				placeholder="Subject"
@@ -127,6 +136,7 @@
 			<br />
 			<label for="message-input">Message*</label>
 			<textarea
+				disabled
 				required
 				type="textarea"
 				id="message-input"
@@ -135,7 +145,7 @@
 				bind:value={formValues.message}
 			/>
 			<br />
-			<input type="submit" value={submitButtonValue} class={submitValue ? "submit-success" : "submit-btn"} />
+			<input disabled type="submit" value={submitButtonValue} class={submitValue ? "submit-success" : "submit-btn"} />
 		</form>
 	</div>
 </div>
@@ -228,6 +238,9 @@
 	}
 	.submit-btn {
 		background: #0022ff;
+	}
+	.submit-btn:active {
+		background: #0001ff;
 	}
 	.submit-success {
 		background: #198038;
