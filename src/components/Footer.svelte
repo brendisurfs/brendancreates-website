@@ -1,26 +1,30 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+    import { onMount } from 'svelte';
 
-	onMount(() => {
-		console.log("the footer has loaded");
-	});
-	const footerItems = [{ name: "github", link: "github.com/brendisurfs" }];
+    onMount(() => {
+        console.log('the footer has loaded');
+    });
+    const footerItems = [{ name: 'github', link: 'github.com/brendisurfs' }];
 </script>
 
-<footer>
-	{#each footerItems as item}
-		<div>
-			{item.name}
-		</div>
-	{/each}
+<footer class="container">
+    <!-- <p>github</p> -->
+    <p>&copy;brendan prednis 2021</p>
 </footer>
 
 <style>
-	footer {
-		padding: 1em;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		height: 2vh;
-	}
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        bottom: 0;
+        margin: 0;
+        position: absolute;
+    }
+    footer {
+        width: 100%;
+        /* background: #0062ff; */
+        display: flex;
+        justify-content: space-evenly;
+    }
 </style>

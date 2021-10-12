@@ -9,7 +9,7 @@
 </script>
 
 <!-- Render the markdown -->
-<!-- Note: dont use the @html in prod, causes an XSS vulnerability, no bueno. -->
+<!-- Note: dont use the @html in prod for user input stuff, causes an XSS vulnerability, no bueno. -->
 <div class="container">
 	<p>
 		{@html rendered}
@@ -18,13 +18,17 @@
 
 <style>
 	.container {
+		background: #151515;
 		display: flex;
 		justify-content: center;
+		height: 100%;
+		padding: 1em;
+		max-width: 820px;
 	}
 	p {
+		color: white;
 		text-align: left;
-		font-size: 18px;
-		inline-size: 56vw;
-		overflow-wrap: inherit;
+		font-size: 17px;
+		inline-size: 60vw;
 	}
 </style>

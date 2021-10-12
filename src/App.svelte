@@ -1,41 +1,43 @@
 <script lang="ts">
-	console.log("this is the main app area.");
+    import Router from 'svelte-spa-router';
+    // pages
+    import HomePage from './pages/Home.svelte';
+    import AboutPage from './pages/AboutPage.svelte';
+    import WorkPage from './pages/WorkPage.svelte';
+    import ContactPage from './pages/ContactPage.svelte';
+    import Layout from './components/Layout.svelte';
+    import VisualsPage from './pages/VisualsPage.svelte';
+    import BlogPage from './pages/BlogPage.svelte';
 
-	import Router from "svelte-spa-router";
-	import Navbar from "./components/Navbar.svelte";
-	// pages
-	import HomePage from "./pages/Home.svelte";
-	import AboutPage from "./pages/About.svelte";
-	import WorkPage from "./pages/WorkPage.svelte";
-	import Footer from "./components/Footer.svelte";
-	import ContactPage from "./pages/ContactPage.svelte";
+    // routes
+    const routes = {
+        '/': HomePage,
+        '/blog': BlogPage,
+        '/work': WorkPage,
+        '/about': AboutPage,
+        '/contact': ContactPage,
+        '/visual': VisualsPage,
+    };
 
-	// routes
-	const routes = {
-		"/": HomePage,
-		"/about": AboutPage,
-		"/work": WorkPage,
-		"/contact": ContactPage,
-	};
 </script>
 
 <main>
-	<Navbar />
-	<Router {routes} />
-	<Footer />
+    <Layout>
+        <Router {routes} />
+    </Layout>
 </main>
 
 <style>
-	main {
-		padding: 1em;
-		text-align: center;
-		max-width: 240px;
-		margin: 0;
-	}
+    main {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    @media (min-width: 640px) {
+        main {
+            max-width: none;
+        }
+    }
 </style>
