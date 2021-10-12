@@ -21,3 +21,4 @@ It has also strengthened my CSS skills faster than I ever thought.
 - [ ] Add accessability tags to components.
 - [ ] Add portal shader.
 - [ ] Fill out Visuals section.
+- [ ] Add custom favicon.

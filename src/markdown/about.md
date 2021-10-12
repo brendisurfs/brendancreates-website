@@ -26,6 +26,6 @@ I have always been curious about how everything works, so this seemed like the r
 
 **Currently, I am:**
 
-- Working on art direction for electronic musician Yula,
+- Working on art direction for electronic musician Yula
 - Doing custom software development for a local business associate
 - Working on expanding the depth of my websites with WebGL
