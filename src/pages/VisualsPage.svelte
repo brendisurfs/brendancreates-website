@@ -61,9 +61,6 @@
         flex-direction: row;
         justify-content: center;
     }
-    /* #album-art-title {
-        width: 1fr 1fr 1fr;
-    } */
     .visuals-layout {
         display: grid;
         align-items: center;
@@ -133,7 +130,7 @@
         transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
     }
 
-/* 
+
     .card-link {
         height: 4em;
         display: flex;
@@ -141,13 +138,15 @@
         background: #252525;
         align-items: flex-start;
         text-align: center;
-    } */
-    /* .card-link p {
+    }
+    /* this will be used later to link to soundclouds. */
+    .card-link p {
         text-align: center;
         margin-left: 1em;
         color : #0062ff;
     }
+    /* same situation with the above comment. */
     a {
         text-decoration: none;
-    } */
+    }
 </style>
