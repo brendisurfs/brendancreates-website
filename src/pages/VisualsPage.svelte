@@ -61,9 +61,9 @@
         flex-direction: row;
         justify-content: center;
     }
-    #album-art-title {
+    /* #album-art-title {
         width: 1fr 1fr 1fr;
-    }
+    } */
     .visuals-layout {
         display: grid;
         align-items: center;
@@ -133,10 +133,7 @@
         transition: opacity 0.2s ease-in-out, background 0.2s ease-in-out;
     }
 
-    .sibling-hover:hover + .sibling-blur { 
-         filter: blur(4px);
-    }
-
+/* 
     .card-link {
         height: 4em;
         display: flex;
@@ -144,13 +141,13 @@
         background: #252525;
         align-items: flex-start;
         text-align: center;
-    }
-    .card-link p {
+    } */
+    /* .card-link p {
         text-align: center;
         margin-left: 1em;
         color : #0062ff;
     }
     a {
         text-decoration: none;
-    }
+    } */
 </style>

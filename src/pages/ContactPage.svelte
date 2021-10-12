@@ -212,9 +212,9 @@
 		font-weight: 300;
 	}
 
-	#email-tag {
+	/* #email-tag {
 		font-weight: 500;
-	}
+	} */
 	#greeting {
 		font-weight: 300;
 	}
