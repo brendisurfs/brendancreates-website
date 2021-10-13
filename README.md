@@ -1,6 +1,6 @@
 # brendancreates-website
 
-### current version: **_0.4.0_**
+### current version: **_0.6.0_**
 
 ---
 
