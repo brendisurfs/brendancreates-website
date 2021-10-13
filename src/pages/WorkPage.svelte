@@ -31,10 +31,7 @@
 </script>
 
 <div class="work-box" in:fly="{{y: 200, duration: 200, delay: 100}}" out:fade="{{duration: 100}}">
-    <div class="work-path-title">
-        <!-- <h2>Choose Your Path</h2> -->
-    </div>
-    <div class="container">
+<div class="container">
         {#each workcardInfo as card}
             {#if card.useLink == true}
                 <WorkCard {...card} />
@@ -53,6 +50,8 @@
         background: #111111;
     }
     .container {
+        margin: 2em;
+        padding: 1em;
         display: flex;
         justify-content: center;
         align-items: center;

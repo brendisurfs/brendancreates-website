@@ -70,8 +70,10 @@ scene.add(particles);
 // animateRender - updates our render window and moves any meshes we specify.
 function animateRender(): void {
 	requestAnimationFrame(animateRender);
-	camera.position.x = Math.sin(cursorLocation.x * Math.PI * -1) * 0.15;
-	camera.position.y = Math.sin(cursorLocation.y * Math.PI * -1) * 0.15;
+	camera.position.x =
+		Math.sin(cursorLocation.x * Math.PI * -1) * 0.25 - 0.5;
+	camera.position.y =
+		Math.sin(cursorLocation.y * Math.PI * -1) * 0.25 - 0.5;
 	camera.lookAt(cube.position);
 
 	if (isMobileState) {

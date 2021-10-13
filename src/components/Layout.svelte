@@ -55,13 +55,18 @@ import Canvas from './Canvas.svelte';
     <Canvas/>
     <!-- canvas section for background 3d -->
     <div class={$overlay ? "blurred-slot":""}>
-        <slot  />
+        <div class="container">
+            <slot  />
+        </div>
     </div>
 </div>
 
 
 <!-- STYLING -->
 <style>
+    .container {
+        padding: 2.5em;
+    }
     .window-container {
         /* padding: 0.5em; */
         justify-content: space-between; 
