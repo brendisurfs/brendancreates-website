@@ -2,18 +2,11 @@
     import Canvas from '../components/Canvas.svelte';
     import {fade, fly} from "svelte/transition"
 
-    let isMobileState: boolean;
+    import {isMobileState} from "../store";
+
     let message: string = 'something 3D will be here soon.';
     let mobileMessage: string = "this experience is much better on desktop."
     let messageLength = message.length;
-    console.log(messageLength);
-
-    // isMobile state
-    if (/android|webOS|iPhone|iPad/i.test(navigator.userAgent)) {
-        isMobileState = true;
-    } else {
-        isMobileState = false;
-    }
 
 </script>
 
@@ -22,12 +15,16 @@
 
     {#if isMobileState}
     <div class="mobileType">
-        <p>This experience is much better on desktop.</p>
+        <p>
+            {mobileMessage}
+        </p>
     </div>
     {:else}
     <div class="typewriter">
-            <p>something 3D will be here soon.</p>
-        </div>
+        <p>
+            {message}
+        </p>
+    </div>
     {/if}
 </div>
 
