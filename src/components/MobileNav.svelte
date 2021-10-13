@@ -30,7 +30,7 @@
 
 <style>
     nav {
-        position: fixed;
+        /* position: fixed; */
         display: flex;
     }
     a {
