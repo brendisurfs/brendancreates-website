@@ -145,7 +145,7 @@
 				bind:value={formValues.message}
 			/>
 			<br />
-			<input disabled type="submit" value={submitButtonValue} class={submitValue ? "submit-success" : "submit-btn"} />
+			<button disabled type="submit" value={submitButtonValue} class={submitValue ? "submit-success" : "submit-btn"} />
 		</form>
 	</div>
 </div>
@@ -196,7 +196,7 @@
 		width: 100%;
 		resize: none;
 	}
-	input[type="submit"],
+	button[type="submit"],
 	input[type="text"],
 	input[type="email"] {
 		width: 100%;
@@ -231,7 +231,7 @@
 		height: 50%;
 		transform: translate(50%, 0);
 	} */
-	input[type="submit"] {
+	button[type="submit"] {
 		text-align: left;
 		color: whitesmoke;
 		border: none;
