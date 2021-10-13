@@ -78,6 +78,7 @@
         flex-direction: row;
         align-items: center;
        margin-top: 1em; 
+       margin-bottom: 1em;
        padding: 1em;
         justify-content: space-between;
         position: absolute;

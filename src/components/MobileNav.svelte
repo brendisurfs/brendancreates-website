@@ -23,6 +23,7 @@
             <p> Developer | creative director | 3D Artist</p>
         </a>
     </div>
+    <br><br><br>
     <button class="mobile-menu" on:click={showMenu}> 
         {$overlay ? "x" : "+"}
     </button>
