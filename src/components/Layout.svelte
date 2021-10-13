@@ -38,10 +38,10 @@ import Canvas from './Canvas.svelte';
 
     <!-- Overlay Menu -->
     <div on:click="{closeMobileMenu}" class={$overlay ? "overlay":"hidden"} >
+        <!-- Mobile overlay herer -->
         <div class={$overlay ? "overlay-content": "hidden"} >
             <ul >
                 {#each routes as route}
-                    
                 <li class="mobile-list-item">
                     <a href={route.route} use:link>
                         {route.name}
@@ -76,6 +76,12 @@ import Canvas from './Canvas.svelte';
 
 
     /* overlay mobile menu */
+    ul {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
     .overlay {
         z-index: 1;
         position: fixed;
